@@ -1,29 +1,29 @@
 <%- include ('partials/header.html') %> <%- include ('partials/menu.html') %>
 
-<table class="ui very basic collapsing celled table">
-  <thead>
-    <tr>
-      <th>Employee</th>
-      <th>Correct Guesses</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% datos.forEach(coin => { %>
-
-    <tr>
-      <td>
-        <h4 class="ui image header">
-          <img src="<%=coin.image%>" class="ui mini rounded image" />
-          <div class="content">
-            <%=coin.name%>
-            <div class="sub header">Human Resources</div>
-          </div>
-        </h4>
-      </td>
-      <td><%=coin.current_price%></td>
-    </tr>
-    <% }); %>
-  </tbody>
-</table>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Logo</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% datos.forEach(coin => { %>
+          <tr>
+            <td><img src="<%=coin.image%>" alt="coin" style="width:30px;"></td>
+            <td><%=coin.name%></td>
+            <td><%=coin.current_price%></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <%- include ('partials/footer.html') %>
+
