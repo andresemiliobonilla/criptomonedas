@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {getListCoin, getConverter, getContacto} = require('../controllers/coinController');
 
-router.route('/coin')
+router.route('/')
   .get(getListCoin)
 
 router.route('/convertidor')
