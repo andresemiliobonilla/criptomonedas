@@ -1,0 +1,18 @@
+<%- include ('partials/header.html') %> <%- include ('partials/menu.html') %>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-12 col-md-4">
+      <img src="<%=datos.image.large%>"/>
+    </div>
+    <div class="col-12 col-md-8">
+      <h5 class="card-title"><%=datos.name %></h5>
+      <p><%=datos.categories %></p>
+      <p><%=datos.hashing_algorithm %></p>
+      <p class="card-text"><%=datos.market_data.current_price.usd %>$</p>
+      <p class="cart-text"> <%=datos.description.es %> </p>
+    </div>
+  </div>
+</div>
+  
+<%- include ('partials/footer.html') %>

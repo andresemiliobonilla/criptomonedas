@@ -1,27 +1,29 @@
 <%- include ('partials/header.html') %> <%- include ('partials/menu.html') %>
 
-<div class="container-fluid">
+<div class="container-fluid mt-5">
   <div class="row">
-    <div class="col-12 col-md-12">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Logo</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% datos.forEach(coin => { %>
-          <tr>
-            <td><img src="<%=coin.image%>" alt="coin" style="width:30px;"></td>
-            <td><%=coin.name%></td>
-            <td><%=coin.current_price%></td>
-          </tr>
+    
+    <% datos.forEach(coin => { %>
+      <div class="col-12 col-md-4 data">
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-4">
+                <img src="<%=coin.image%>" class="w-100" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%=coin.name%></h5>
+                  <p class="card-text"><%=coin.current_price%>$</p>
+                  <a class="nav-link btn border-primary" href="/infocoin/<%=coin.id%>">mas informacion</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
           <% }); %>
-        </tbody>
-      </table>
-    </div>
+
   </div>
 </div>
 
