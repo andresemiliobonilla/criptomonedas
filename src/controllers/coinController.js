@@ -18,7 +18,7 @@ coinController.getContacto = (req, res) => {
 coinController.getInfoCoin = (req, res) => {
   axios.get('https://api.coingecko.com/api/v3/coins/'+req.params.id)
   .then(data => res.render('infocoin.html', {datos: data.data}))
-  .catch(err => console.log("buscar este error"))
+  .catch(err => console.log(err))
 }
 
 module.exports = coinController;
